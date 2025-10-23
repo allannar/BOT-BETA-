@@ -1,7 +1,6 @@
 import telebot
-import bot
-
-bot = telebot.TeleBot('YOUR TOKEN HERE')
+from logic import timer
+bot = telebot.TeleBot('8424301291:AAF_NtCw61Ux91OBfW4SMsGxOkzKlZEVi2I')
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -24,8 +23,12 @@ def send_info(massage):
     bot.reply_to(massage, 'Тут скоро появиться информация о боте, A little bit of waiting')
 
 #@bot.message_handler(commands=['generator'])
-#def send_password(massage): ( В ПРОЦЕССЕ ) 
-    
+#def send_password(massage):
+
+@bot.message_handler(commands=['timer'])
+def send_timer(massage):
+    bot.reply_to(massage, timer)
+
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
