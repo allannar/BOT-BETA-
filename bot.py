@@ -1,6 +1,6 @@
 import telebot
 from logic import timer
-bot = telebot.TeleBot('8424301291:AAF_NtCw61Ux91OBfW4SMsGxOkzKlZEVi2I')
+bot = telebot.TeleBot('YOUR TOKEN HERE')
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
