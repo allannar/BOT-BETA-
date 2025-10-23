@@ -1,7 +1,7 @@
 import time, threading, schedule
 from telebot import TeleBot
 
-bot = TeleBot('8424301291:AAF_NtCw61Ux91OBfW4SMsGxOkzKlZEVi2I')
+bot = TeleBot('YOUR TOKEN HERE')
 def timer():
     def beep(chat_id) -> None:
         """Send the beep message."""
